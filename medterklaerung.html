@@ -1,0 +1,156 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Was ist die MEDT?</title>
+	    <link rel="stylesheet" href="css/foundation.css">
+	    <link rel="stylesheet" href="css/app.css">
+	    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet"> 
+	    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	    <link rel="stylesheet" href="icons/foundation-icons.css" />
+
+	    <style type="text/css">
+	    	body{
+		    	font-family: Arial;
+		    	overflow-x: hidden;
+		    	overflow-y: hidden;
+	    	}
+
+	    	#video{
+	    		position: fixed;
+	    		right: 0;
+	    		bottom: 0;
+	    		min-width: 100%;
+	    		min-height: 100%;
+	    		top:10vh;
+	    	}
+
+	    	.top-bar{
+	    		display: flex;
+	    		justify-content: center;
+	    		align-items: center;
+	    		height: 10vh;
+	    	}
+
+	    	.content{
+	    		width: 100%;
+	    		display: flex;
+	    		justify-content: center;
+	    		align-items: center;
+	    		
+
+	    	}
+
+	    	
+	    	h1,.button{
+	    		opacity: 0;
+	    		animation:fadeIn 1s ease-in both;
+	    	}
+
+	    	.ueberschrift1,.ueberschrift2,.ueberschrift3,.ueberschrift4,.ueberschrift5,.ueberschrift6{
+	    		color:#fff;
+	    		font-size: 30pt;
+	    		position: absolute;
+	    	}
+
+	    	.ueberschrift1{
+	    		top:25vh;
+	    		color: #ffa800;
+	    	}
+
+	    	.ueberschrift2{
+	    		top:35vh;
+	    		animation-delay: 3s;
+	    	}
+
+	    	.ueberschrift3{
+	    		top:45vh;
+	    		animation-delay: 6s;
+	    		color:#68E042;
+	    	}
+
+	    	.ueberschrift4{
+	    		top:55vh;
+	    		animation-delay: 9s;
+	    	}
+
+	    	.ueberschrift5{
+	    		top:65vh;
+	    		animation-delay: 12s;
+	    		color: #ffa800;
+	    	}
+
+	    	.ueberschrift6{
+	    		top:75vh;
+	    		animation-delay: 15s;
+	    	}
+
+	    	@keyframes fadeIn{
+				from{
+					opacity: 0;
+					transform: translate3d(0,-20%,0);
+				}to{
+					opacity: 1;
+					transform: translate3d(0,0,0);
+				}
+			}
+
+			.buttonwrap{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				top: 75vh;
+			}
+
+			.button{
+				font-size: 18pt;
+				animation-delay: 18s;
+			}
+
+			.button:hover{
+				background-color: #68E042;
+			}
+
+			
+		
+
+
+	    </style>
+	</head>
+	<body>
+		<div class="top-bar">
+			<a href="index.html"><img align="center" class="logo_img" src="images/logo_schrift.png" width="90" height="90"/></a>
+		</div>
+
+		<video autoplay muted loop id="video">
+			<source src="videos/stars.mp4" type="video/mp4">
+		</video>
+
+
+		<div class="content">
+			<h1 class="ueberschrift1">Nun stellt sich die Frage: Was ist Medientechnik?</h1>
+			<h1 class="ueberschrift2">Alles was du hier siehst hat mit Medientechnik zutun. </h1>
+			<h1 class="ueberschrift3">Die Medientechnik ist rieeesig. Sie beinhaltet sehr viele Bereiche, sowie Teilbereiche.</h1>
+			<h1 class="ueberschrift4">Die Sterne die du im Hintergrund siehst, visualisieren die Größe der Medientechnik.</h1>
+			<h1 class="ueberschrift5">Die beliebtesten Teilbereiche kennst du wahrscheinlich: Video, Audio und Webprogrammierung!</h1>
+			<h1 class="ueberschrift6">Mit denen werden wir uns im Laufe unserer Reise befassen</h1>
+		</div>
+
+		<div class="buttonwrap">
+			<a href="#" class="button text-center">Weiter</a>
+		</div>
+
+
+
+
+
+
+		<script src="js/vendor/jquery.js"></script>
+	    <script src="js/vendor/what-input.js"></script>
+	    <script src="js/vendor/foundation.js"></script>
+	    <script src="js/app.js"></script>
+	</body>
+</html>

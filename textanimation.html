@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/foundation.css">
+    	<link rel="stylesheet" href="css/app.css">
+    	
+		<title> Textanimationen </title>
+		<style type="text/css">
+
+			/*NAVIGATION*/
+		      .top-bar-right{
+		        margin-right: 50px;
+		      }
+
+		      .top-bar ul li a{
+		        font-size: 12pt;
+		        color: #fff;
+		        letter-spacing: 4px;
+		        background-color: #ffa800;
+		      }
+
+		      .top-bar{
+		      	height: 10vh;
+		      	position: relative;
+		      }
+
+
+		      .top-bar, .top-bar ul li a{
+		        background-color: #ffa800;
+		      }
+
+		      .top-bar ul li a:hover{
+		        color: #68E042;
+		      }
+
+		      .logo-wrapper{
+		        margin-left: 50px;
+
+		      }
+
+		      .fixed{
+		        height: 10vh;
+		        background-color: #ffa800;
+		      }
+
+		      /*ACCORDION MENU*/
+		      .title-bar{
+		        background-color: #fff;
+		        color: #ffa800;
+		        font-weight: normal;
+		        font-size: 12pt;
+		      }
+
+			/*Animation: von oben herab*/
+			.wrapper{
+				max-width: 600px;
+			}
+
+			.erstertext, .zweitertext, .drittertext{
+				font-family: Arial;
+				color: #c7c4c5;
+				position: absolute;
+				font-size: 24pt;
+			}
+
+			h1{
+				opacity: 0;
+				animation: fadeIn 1s ease-in both;
+			}
+
+			.erstertext{
+				top: 40vh;
+				left: 10vh;
+			}
+
+			.zweitertext{
+				animation-delay: 2s;
+				top: 50vh;
+				right: 10vh;
+			}
+
+			.drittertext{
+				animation-delay: 4s;
+				left: 10vh;
+				top: 65vh;
+
+			}
+
+			@keyframes fadeIn{
+				from{
+					opacity: 0;
+					transform: translate3d(0,-20%,0);
+				}to{
+					opacity: 1;
+					transform: translate3d(0,0,0);
+				}
+			}
+
+
+
+
+			/* Hallo Animation */
+		
+
+			.text {
+			  fill: none;
+			  stroke-width: 6;
+			  stroke-linejoin: round;
+			  stroke-dasharray: 70 330;
+			  stroke-dashoffset: 0;
+			  -webkit-animation: stroke 6s infinite linear;
+			  animation: stroke 6s infinite linear;
+			}
+
+			.text:nth-child(5n + 1) {
+			  stroke: #ffa800;
+			  -webkit-animation-delay: -1.2s;
+			  animation-delay: -1.2s;
+			}
+			.text:nth-child(5n + 2) {
+			  stroke: #68E042;
+			  -webkit-animation-delay: -2.4s;
+			  animation-delay: -2.4s;
+			}
+
+			.text:nth-child(5n + 3) {
+			  stroke: #c7c4c5;
+			  -webkit-animation-delay: -3.6s;
+			  animation-delay: -3.6s;
+			}
+
+			.text:nth-child(5n + 4) {
+			  stroke: #ffa800;
+			  -webkit-animation-delay: -4.8s;
+			  animation-delay: -4.8s;
+			}
+
+			.text:nth-child(5n + 5) {
+			  stroke: #68E042;
+			  -webkit-animation-delay: -6s;
+			  animation-delay: -6s;
+			}
+
+			
+
+			@-webkit-keyframes stroke {
+			  100% {
+			    stroke-dashoffset: -400;
+			  }
+			}
+
+			@keyframes stroke {
+			  100% {
+			    stroke-dashoffset: -400;
+			  }
+			}
+
+			
+
+			body {
+			
+			  font: 150pt Arial;
+			  margin: 0;
+			}
+
+			svg {
+			  position: absolute;
+			  width: 100%;
+			  height: 15vh;
+			  top: 20vh;
+			}
+
+
+			
+
+		</style>
+	</head>
+
+	<body>
+		
+		<!--<div class="fixed">
+        <div class="top-bar" data-topbar role="navigation">
+          <div class="logo-wrapper">
+       
+              <img class="logo_img" src="images/logo2.png" width="100" height="80">
+   
+          </div>
+
+          <div class="title-bar" data-responsive-toggle="resmenu" data-hide-for="medium">
+            <i class="fi-list" data-toggle="resmenu"></i>
+            <div class="title-bar-title">Men&uuml; </div>
+          </div>
+
+          <div class="top-bar-right" data-magellan  id="resmenu">
+            <ul class="vertical medium-horizontal menu dropdown menu" data-dropdown-menu>
+              <li><a href="">&Uuml;BER UNS</a>
+                <ul class="menu">
+                  <li><a href="#video1">ENTDECKE</a></li>
+                  <li><a href="#video2">ERLEBE</a></li>
+                  <li><a href="#video3">ENTSCHEIDE</a></li>
+                </ul>
+              </li>
+              <li><a href="informationen.html">INFORMATIONEN</a></li>
+              <li><a href="kontakt.html">KONTAKT</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>-->
+
+		<div id="welcome">
+			
+
+			<svg viewBox="0 0 600 300">
+
+			  <!-- Symbol -->
+			  <symbol id="s-Hallo">
+			    <text text-anchor="middle"
+			          x="50%" y="50%" dy=".35em">
+			      Hallo
+			    </text>
+			  </symbol>  
+
+			  <!-- Duplicate symbols -->
+			  <use xlink:href="#s-Hallo" class="text"></use>
+			  <use xlink:href="#s-Hallo" class="text"></use>
+			  <use xlink:href="#s-Hallo" class="text"></use>
+			  <use xlink:href="#s-Hallo" class="text"></use>
+			  <use xlink:href="#s-Hallo" class="text"></use>
+			  
+
+			</svg>
+
+
+		</div>
+		<div id="wrapper">
+			<h1 class="erstertext text-left">D&uuml;rfen wir uns kurz vorstellen?</h1>
+			<h1 class="zweitertext text-right">Wir sind Hatice, Niklas und Kerstin und wollen dir die Medientechnik n&auml;her bringen!</h1>
+			<h1 class="drittertext text-left">Doch bevor es richtig losgehen kann, haben wir ein Video f&uuml;r dich vorbereitet! </h1>
+		</div>
+
+		<script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+	</body>
+</html>
