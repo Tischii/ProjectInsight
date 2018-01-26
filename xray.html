@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+	<script src="https://code.createjs.com/tweenjs-0.6.2.min.js"></script>
+	<script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
+	<script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+</head>
+
+<body onload="init()">
+
+<canvas id="canvas" width="1000" height="800"></canvas>
+
+</body>
+
+<script>
+    var stage;
+    function init() {
+        stage = new createjs.Stage(document.getElementById('canvas'));
+        cat();
+        startGame();
+    }
+    function cat() {
+        var box = new createjs.Bitmap('images/box.png');
+        var katze = new createjs.Bitmap('images/katze.png');
+        var mask = new createjs.Shape(new createjs.Graphics().drawCircle(0, 0, 70));
+        katze.mask = mask;
+        stage.addChild(mask, box, katze);
+        mask.addEventListener('tick', function (e) {
+            e.currentTarget.x = stage.mouseX;
+            e.currentTarget.y = stage.mouseY;
+        })
+    }
+    function startGame() {
+        createjs.Ticker.setFPS(60);
+        createjs.Ticker.addEventListener("tick", function (e) {
+            stage.update();
+        });
+    }
+</script>
+</html>

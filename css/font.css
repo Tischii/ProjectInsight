@@ -1,0 +1,11 @@
+﻿/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family:"Parisien Night";
+    src:url("../fonts/Parisien_Night_Oblique.eot?")
+    format("eot"),url("../fonts/Parisien_Night_Oblique.woff")
+    format("woff"),url("../fonts/Parisien_Night_Oblique.ttf")
+    format("truetype"),url("../fonts/Parisien_Night_Oblique.svg#ParisienNight-Oblique")
+    format("svg");
+    font-weight:normal;
+    font-style:normal;
+}

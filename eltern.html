@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="icons/fontawesome-all.min.css">
+
+    <script type="text/javascript">
+        <!--
+        if (screen.width <= 1000) {
+            window.location = "eltern_mobile.html";
+        }
+        //-->
+    </script>
+
+
+    <style type="text/css">
+        .top-bar ul li .linkactive{
+            background-color: #ffa800;
+            height: 10vh;
+            color: #fff;
+        }
+
+        .top-bar ul li .linkactive:hover{
+            background-color: #68e042;
+            color: #fff;
+        }
+
+        @font-face { font-family: 'meine-schrift';
+            src: url('fonts/Parisien Night Oblique.otf') format('opentype');
+        }
+
+        *{
+            font-family: Roboto;
+        }
+
+        .top-bar,.top-bar ul li a, .title-bar, .fixed{
+            background-color: #fff;
+        }
+
+        .top-bar-right{
+            margin-right: 50px;
+        }
+
+        .top-bar ul li a{
+            font-size: 16pt;
+            letter-spacing: 4px;
+            color: #ffa800;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            height:10vh;
+            text-align: center;
+        }
+
+
+
+        .top-bar ul li a:hover{
+            color: #68e042;
+        }
+
+
+
+        .top-bar, .title-bar, .top-bar-right{
+            background-color: #fff;
+
+        }
+
+        .top-bar ul{
+            background-color: #fff;
+        }
+
+        .logo{
+            margin-left: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo_img{
+            height: 8vh;
+
+        }
+
+        .fixed{
+            height: 10vh;
+            position: fixed;
+            width: 100%;
+            z-index: 10000;
+        }
+
+        .content{
+            position: relative;
+            top: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            background: url('images/shootingstar.jpg') 50% no-repeat;
+            background-size: cover;
+        }
+
+
+
+        .text{
+            font-size: 22pt;
+            margin-bottom: 5vh;
+            color: #fff;
+        }
+
+        .text2{
+            font-size: 20pt;
+            text-align: center;
+            margin-bottom: 5vh;
+            color: #fff;
+
+        }
+
+        .button{
+            color: #fff;
+            background-color: #ffa800;
+            font-size: 18pt;
+            width: 30%;
+        }
+
+        .button:hover{
+            background-color: #68e042;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fixed">
+    <div class="top-bar" data-topbar role="navigation">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <a class="logo" href="index.html"><img class="logo_img" src="images/logo.svg" ></a>
+            </div>
+        </div>
+
+        <div class="title-bar" data-responsive-toggle="resmenu" data-hide-for="medium">
+            <div class="title-bar-right">
+                <button class="menu-icon" type="button" data-toggle="resmenu"></button>
+                <div class="title-bar-title">MEN&Uuml; </div>
+            </div>
+        </div>
+
+        <div class="top-bar-right" data-magellan id="resmenu">
+            <ul class="vertical medium-horizontal menu">
+                <li><a class="" href="ueberuns.html">&Uuml;BER UNS</a></li>
+                <li><a class="linkactive" href="eltern.html">DOWNLOAD</a></li>
+                <li><a class="" href="faq.html">FAQ</a></li>
+                <li><a class="" href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <p class="text">Du m&ouml;chtest noch mehr Informationen? We got you!</p>
+    <p class="text2">Wir haben alles nocheinmal ausf&uuml;hrlich aufgeschrieben damit du dir alles nochmal in Ruhe durchlesen kannst. <br> Alles was du tun musst, ist auf den Download-Button dr&uuml;cken!</p>
+    <a href="documents/insight.pdf" class="button">Download</a>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/skrollr.js"></script>
+<script src="js/_main.js"></script>
+
+</body>
+</html>

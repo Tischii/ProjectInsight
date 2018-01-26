@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Parisien Night';
+            src: url('fonts/paris.otf') format('opentype');
+
+        }
+
+        html{
+            overflow-y: scroll;
+        }
+
+        *{
+            font-family: Roboto;
+            color: #fff;
+        }
+
+        .top-bar,.top-bar ul li a, .title-bar, .fixed{
+            background-color: #fff;
+        }
+
+        .top-bar-right{
+            margin-right: 50px;
+        }
+
+        .top-bar ul li a{
+            font-size: 16pt;
+            letter-spacing: 4px;
+            color: #ffa800;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            height:10vh;
+        }
+
+
+
+        .top-bar ul li a:hover{
+            color: #68e042;
+        }
+
+
+
+        .top-bar, .title-bar, .top-bar-right{
+            background-color: #fff;
+
+        }
+
+        .top-bar ul{
+            background-color: #fff;
+        }
+
+        .logo{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo_img{
+            height: 8vh;
+
+        }
+
+        .fixed{
+            height: 10vh;
+            position: fixed;
+            width: 100%;
+            z-index: 10000;
+        }
+
+        .menu-icon{
+            background-color: #ffa800;
+        }
+
+        .title-bar-title{
+            color: #ffa800;
+            font-weight: normal;
+            font-family: Roboto;
+            font-size: 16pt;
+            letter-spacing: 4px;
+        }
+
+        .hero{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url('images/willkommenbg.jpg') 50% no-repeat;
+            background-size: cover;
+        }
+
+        .ueberschrift{
+            font-family: "Parisien Night";
+            font-size: 72pt;
+            color: #fff;
+            margin-top: 20vh;
+            padding-bottom: 10vh;
+        }
+
+        .fa-chevron-circle-down{
+            font-size: 54pt;
+            color: #ffa800;
+
+        }
+
+        .fa-chevron-circle-down:hover{
+            color: #68e042;
+        }
+
+        #slide1, #slide2, #slide3, .content{
+            height: 100vh;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #slide1{
+            background: url('images/hero.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+        #slide2{
+            background: url('images/bereiche.jpg') 50% 0 no-repeat;
+            background-size:cover;
+        }
+
+        #slide3{
+            background: url('images/start_bg.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+        .slideheader, .slideheader-alt{
+            color: #fff;
+            text-align: center;
+            font-family: "Parisien Night";
+            font-size: 32pt;
+            margin-bottom: 5vh;
+        }
+
+        .slideheader-alt{
+            font-size: 18pt;
+        }
+
+        .slidetext,.slidetext-row,.slidesubheader{
+            padding-left: 10vw;
+            padding-right: 10vw;
+            font-size: 14pt;
+            margin-bottom: 5vh;
+        }
+
+        .button{
+            width: 50%;
+            font-size: 16pt;
+        }
+
+        .button:hover{
+            background-color: #68e042;
+        }
+
+        .fa-code,.fa-camera,.fa-microphone{
+            font-size: 28pt;
+            margin-left: 18vw;
+
+
+        }
+
+        .fa-camera{
+            margin-left: 23vw;
+        }
+
+        .fa-code{
+            margin-left: 32vw;
+        }
+
+
+
+        .grid-y{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
+
+        }
+
+
+        .slidetext-row{
+            text-align: center;
+            margin-left: 5vw;
+        }
+
+
+
+        .gallery{
+            height: 100vh;
+            position: relative;
+            top: 10vh;
+        }
+
+        .one, .two, .three{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            width: 100%;
+        }
+
+        .one{
+            background: url('images/hero.jpg') 50% 0 no-repeat;
+            background-size:cover;
+        }
+
+        .two{
+            background: url('images/bereiche.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+        .three{
+            background: url('images/start_bg.jpg') 50% 0 no-repeat;
+            background-size: cover;
+        }
+
+
+
+        .slidetext-row{
+            text-align: center;
+
+        }
+
+        .slideheader{
+            font-size: 22pt;
+        }
+
+        .fa-bars{
+            color: #ffa800;
+            font-size: 18pt;
+            position: relative;
+            top: 0.8vh;
+            margin-right: 2vw;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<script src="js/flickity.pkgd.min.js"></script>
+<script>
+    var flkty = new Flickity( '.main-gallery', {
+        // options
+        cellAlign: 'left',
+        contain: true
+    });
+</script>
+
+<div class="fixed">
+    <div class="top-bar" data-topbar role="navigation">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <img class="logo_img" src="images/logo.svg" >
+            </div>
+        </div>
+
+        <div class="title-bar" data-responsive-toggle="resmenu" data-hide-for="medium">
+            <div class="title-bar-right">
+                <button type="button" data-toggle="resmenu"><i class="fa fa-bars"></i></button>
+                <div class="title-bar-title">MEN&Uuml;</div>
+            </div>
+        </div>
+
+        <div class="top-bar-right" data-magellan id="resmenu">
+            <ul class="vertical medium-horizontal menu">
+                <li><a class="linkactive" href="ueberuns.html">&Uuml;BER UNS</a></li>
+                <li><a class="" href="eltern.html">DOWNLOAD</a></li>
+                <li><a class="" href="faq.html">FAQ</a></li>
+                <li><a class="" href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="gallery js-flickity">
+    <div class="gallery-cell one">
+        <h1 class="slideheader">Entdecke die Medientechnik</h1>
+        <p class="slidetext">Die Medientechnik ist ein enorm gro&szlig;er Bereich und kann auch verwirrend wirken. <br>
+            Doch keine Sorge, we got you! Durch unsere Webseite kannst du die Medientechnik spielerisch entdecken! <br> Du brauchst kein Vorwissen, nur deine magischen H&auml;nde!</p>
+    </div>
+    <div class="gallery-cell two">
+        <h1 class="slideheader-alt">Erhalte einen Einblick in 3 Bereiche der Medientechnik</h1>
+        <div class="grid-y">
+            <div class="small-12 medium-4 large-4">
+                <i class="fa fa-code"></i>
+                <p class="slidetext-row">Webprogrammierung</p>
+
+            </div>
+            <div class="small-12 medium-4 large-4">
+                <i class="fa fa-camera"></i>
+                <p class="slidetext-row">Foto & Video</p>
+            </div>
+
+            <div class="small-12 medium-4 large-4">
+                <i class="fa fa-microphone"></i>
+                <p class="slidetext-row">Audio</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="gallery-cell three">
+        <h1 class="slideheader">Na dann, worauf wartest du noch?</h1>
+        <h2 class="slidesubheader">Dr&uuml;cke auf den Button und begib dich auf die Reise deines Lebens! Du wirst es nicht bereuen!</h2>
+        <a href="willkommen.html" class="button link">Zur Reise</a>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/skrollr.js"></script>
+<script src="js/_main.js"></script>
+</body>
+</html>

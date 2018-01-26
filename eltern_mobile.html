@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Über uns</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Parisien Night';
+            src: url('fonts/paris.otf') format('opentype');
+
+        }
+
+        html{
+            overflow-y: scroll;
+        }
+
+        *{
+            font-family: Roboto;
+            color: #fff;
+        }
+
+        .top-bar,.top-bar ul li a, .title-bar, .fixed{
+            background-color: #fff;
+        }
+
+        .top-bar-right{
+            margin-right: 50px;
+        }
+
+        .top-bar ul li a{
+            font-size: 16pt;
+            letter-spacing: 4px;
+            color: #ffa800;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            height:10vh;
+        }
+
+
+
+        .top-bar ul li a:hover{
+            color: #68e042;
+        }
+
+
+
+        .top-bar, .title-bar, .top-bar-right{
+            background-color: #fff;
+
+        }
+
+        .top-bar ul{
+            background-color: #fff;
+        }
+
+        .logo{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo_img{
+            height: 8vh;
+
+        }
+
+        .fixed{
+            height: 10vh;
+            position: fixed;
+            width: 100%;
+            z-index: 10000;
+        }
+
+        .fa-bars{
+            color: #ffa800;
+            font-size: 18pt;
+            position: relative;
+            top: 0.8vh;
+            margin-right: 2vw;
+        }
+
+        .title-bar-title{
+            color: #ffa800;
+            font-weight: normal;
+            font-family: Roboto;
+            font-size: 16pt;
+            letter-spacing: 4px;
+        }
+
+        .hero{
+            background: url('images/shootingstar.jpg') 50% no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .ueberschrift{
+            color: #fff;
+            margin-left: 10vw;
+            margin-right: 5vw;
+            font-size: 14pt;
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+        }
+
+        .title{
+            font-family: "Parisien Night";
+            text-align: center;
+            font-size: 22pt;
+        }
+
+        .button{
+            color: #fff;
+            background-color: #ffa800;
+            font-size: 18pt;
+            width: 50%;
+        }
+
+        .button:hover{
+            background-color: #68e042;
+        }
+
+    </style>
+</head>
+<body>
+<div class="fixed">
+    <div class="top-bar" data-topbar role="navigation">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <a href="index.html"><img class="logo_img" src="images/logo.svg" /></a>
+            </div>
+        </div>
+
+        <div class="title-bar" data-responsive-toggle="resmenu" data-hide-for="medium">
+            <div class="title-bar-right">
+                <button type="button" data-toggle="resmenu"><i class="fa fa-bars"></i></button>
+                <div class="title-bar-title">MEN&Uuml;</div>
+            </div>
+        </div>
+
+        <div class="top-bar-right" data-magellan id="resmenu">
+            <ul class="vertical medium-horizontal menu">
+                <li><a class="" href="ueberuns.html">&Uuml;BER UNS</a></li>
+                <li><a class="" href="eltern.html">DOWNLOAD</a></li>
+                <li><a class="" href="faq.html">FAQ</a></li>
+                <li><a class="" href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="hero">
+    <h1 class="title">Download</h1>
+    <h1 class="ueberschrift">Wir haben alles nocheinmal ausf&uuml;hrlich aufgeschrieben damit du dir alles nochmal in Ruhe durchlesen kannst. <br> Alles was du tun musst, ist auf den Download-Button dr&uuml;cken!</h1>
+    <a href="documents/insight.pdf" class="button">Download</a>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/skrollr.js"></script>
+<script src="js/_main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <script type="text/javascript">
+        <!--
+        if (screen.width <= 1000) {
+            window.location = "faq_mobile.html";
+        }
+        //-->
+    </script>
+
+
+    <style type="text/css">
+        .top-bar ul li .linkactive{
+            background-color: #68e042;
+            height: 10vh;
+            color: #fff;
+        }
+
+        .top-bar ul li .linkactive:hover{
+            background-color: #ffa800;
+            color: #fff;
+        }
+
+        @font-face { font-family: 'meine-schrift';
+            src: url('fonts/Parisien Night Oblique.otf') format('opentype');
+        }
+
+        *{
+            font-family: Roboto;
+        }
+
+        .top-bar,.top-bar ul li a, .title-bar, .fixed{
+            background-color: #fff;
+        }
+
+        .top-bar-right{
+            margin-right: 50px;
+        }
+
+        .top-bar ul li a{
+            font-size: 16pt;
+            letter-spacing: 4px;
+            color: #ffa800;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            height:10vh;
+            text-align: center;
+        }
+
+
+
+        .top-bar ul li a:hover{
+            color: #68e042;
+        }
+
+
+
+        .top-bar, .title-bar, .top-bar-right{
+            background-color: #fff;
+
+        }
+
+        .top-bar ul{
+            background-color: #fff;
+        }
+
+        .logo{
+            margin-left: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo_img{
+            height: 8vh;
+
+        }
+
+        .fixed{
+            height: 10vh;
+            position: fixed;
+            width: 100%;
+            z-index: 10000;
+        }
+
+        .content{
+            height: 90vh;
+            background: url('images/faqbg.jpg') 50% no-repeat;
+            background-size:cover;
+            position: relative;
+            top: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .ueberschrift{
+            color: #fff;
+            margin-bottom: 5vh;
+            font-size: 22pt;
+        }
+
+        .accordion{
+            width: 80%;
+        }
+        .unteruberschrift{
+            color: #fff;
+            top: 20vh;
+            position: relative;
+            font-size: 22pt;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fixed">
+    <div class="top-bar" data-topbar role="navigation">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <a class="logo" href="index.html"><img class="logo_img" src="images/logo.svg" ></a>
+            </div>
+        </div>
+
+        <div class="title-bar" data-responsive-toggle="resmenu" data-hide-for="medium">
+            <div class="title-bar-right">
+                <button class="menu-icon" type="button" data-toggle="resmenu"></button>
+                <div class="title-bar-title">MEN&Uuml; </div>
+            </div>
+        </div>
+
+        <div class="top-bar-right" data-magellan id="resmenu">
+            <ul class="vertical medium-horizontal menu">
+                <li><a class="" href="ueberuns.html">&Uuml;BER UNS</a></li>
+                <li><a href="eltern.html">DOWNLOAD</a></li>
+                <li><a class="linkactive" href="faq.html">FAQ</a></li>
+                <li><a class="" href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <h1 class="ueberschrift">Hier findest du die am h&auml;ufig gestelltesten Fragen</h1>
+    <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
+        <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">Was ist eine HTL?</a>
+            <div class="accordion-content" data-tab-content>
+                Eine HTL ist eine Höhere Technische Lehranstalt.<br>
+                Die Normalform der Höheren Abteilungen wird ebenfalls in der Regel nach der achten Schulstufe besucht. Die fünfjährige Ausbildung schließt mit der Reife- und Diplomprüfung ab. Nach drei Jahren ingenieurmäßiger Berufspraxis kann auf Antrag die Standesbezeichnung Ingenieur (Ing.) verliehen werden. Der Abschluss einer österreichischen HTL wird europaweit im Sinne der EU-Richtlinie 92/51 EWG, Anhang D als Diplomausbildung anerkannt (entspricht einer universitären Ausbildung von mindestens einem Jahr und weniger als drei Jahren). Die Reifeprüfung berechtigt zum Studium an allen Hochschulen und entspricht dem ISCED-Level 4A
+            </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">Was ist die Medientechnik?</a>
+            <div class="accordion-content" data-tab-content>
+                Die Medientechnik befasst sich mit dem Bereich der digitalen Medien.
+            </div>
+        </li>
+    </ul>
+
+    <h2 class="unteruberschrift">Wurde deine Frage nicht beantwortet? Klick <a href="kontakt.html">hier</a> um uns deine Frage zu schicken</h2>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/skrollr.js"></script>
+<script src="js/_main.js"></script>
+
+</body>
+</html>

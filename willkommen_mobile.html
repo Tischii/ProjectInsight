@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <title>Einführung</title>
+
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Parisien Night';
+            src: url('fonts/paris.otf') format('opentype');
+
+        }
+
+        html{
+            overflow-y: scroll;
+        }
+
+        *{
+            font-family: Roboto;
+            margin-left: 5vw;
+            margin-right: 5vw;
+
+        }
+
+
+
+        .top-bar{
+            background-color: #fff;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            z-index: 10000;
+
+
+        }
+
+        .logo_img{
+            height: 8vh;
+
+        }
+
+        /* --------------------------------
+
+        Modules - reusable parts of our design
+
+        -------------------------------- */
+        .cd-container {
+            /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+        .cd-container::after {
+            /* clearfix */
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* --------------------------------
+
+        Main components
+
+        -------------------------------- */
+
+
+        @media only screen and (min-width: 1170px) {
+
+            header h1 {
+                font-size: 24px;
+                font-size: 1.5rem;
+            }
+        }
+
+        #cd-timeline {
+            position: relative;
+            padding: 2em 0;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        #cd-timeline::before {
+            /* this is the vertical line */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 4px;
+            background: #d7e4ed;
+        }
+        @media only screen and (min-width: 1170px) {
+            #cd-timeline {
+                margin-top: 3em;
+                margin-bottom: 3em;
+            }
+            #cd-timeline::before {
+                left: 50%;
+                margin-left: -2px;
+            }
+        }
+
+        .cd-timeline-block {
+            position: relative;
+            margin: 2em 0;
+        }
+        .cd-timeline-block:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .cd-timeline-block:first-child {
+            margin-top: 0;
+        }
+        .cd-timeline-block:last-child {
+            margin-bottom: 0;
+        }
+        @media only screen and (min-width: 1170px) {
+            .cd-timeline-block {
+                margin: 4em 0;
+            }
+            .cd-timeline-block:first-child {
+                margin-top: 0;
+            }
+            .cd-timeline-block:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .cd-timeline-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+        }
+        .cd-timeline-img img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            margin-left: -12px;
+            margin-top: -12px;
+        }
+
+        @media only screen and (min-width: 1170px) {
+            .cd-timeline-img {
+                width: 60px;
+                height: 60px;
+                left: 50%;
+                margin-left: -30px;
+                /* Force Hardware Acceleration in WebKit */
+                -webkit-transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+            }
+            .cssanimations .cd-timeline-img.is-hidden {
+                visibility: hidden;
+            }
+            .cssanimations .cd-timeline-img.bounce-in {
+                visibility: visible;
+                -webkit-animation: cd-bounce-1 0.6s;
+                -moz-animation: cd-bounce-1 0.6s;
+                animation: cd-bounce-1 0.6s;
+            }
+        }
+
+        @-webkit-keyframes cd-bounce-1 {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(0.5);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale(1.2);
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        @-moz-keyframes cd-bounce-1 {
+            0% {
+                opacity: 0;
+                -moz-transform: scale(0.5);
+            }
+
+            60% {
+                opacity: 1;
+                -moz-transform: scale(1.2);
+            }
+
+            100% {
+                -moz-transform: scale(1);
+            }
+        }
+        @keyframes cd-bounce-1 {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(0.5);
+                -moz-transform: scale(0.5);
+                -ms-transform: scale(0.5);
+                -o-transform: scale(0.5);
+                transform: scale(0.5);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        .cd-timeline-content {
+            position: relative;
+            margin-left: 60px;
+            background: white;
+            border-radius: 0.25em;
+            padding: 1em;
+            box-shadow: 0 3px 0 #d7e4ed;
+        }
+        .cd-timeline-content:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .cd-timeline-content h2 {
+            color: #303e49;
+        }
+        .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+            font-size: 13px;
+            font-size: 0.8125rem;
+        }
+        .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+            display: inline-block;
+        }
+        .cd-timeline-content p {
+            margin: 1em 0;
+            line-height: 1.6;
+        }
+        .cd-timeline-content .cd-read-more {
+            float: right;
+            padding: .8em 1em;
+            background: #acb7c0;
+            color: white;
+            border-radius: 0.25em;
+        }
+        .no-touch .cd-timeline-content .cd-read-more:hover {
+            background-color: #bac4cb;
+        }
+        .cd-timeline-content .cd-date {
+            float: left;
+            padding: .8em 0;
+            opacity: .7;
+        }
+        .cd-timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: 100%;
+            height: 0;
+            width: 0;
+            border: 7px solid transparent;
+            border-right: 7px solid white;
+        }
+        @media only screen and (min-width: 768px) {
+            .cd-timeline-content h2 {
+                font-size: 20px;
+                font-size: 1.25rem;
+            }
+            .cd-timeline-content p {
+                font-size: 16px;
+                font-size: 1rem;
+            }
+            .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+                font-size: 14px;
+                font-size: 0.875rem;
+            }
+        }
+        @media only screen and (min-width: 1170px) {
+            .cd-timeline-content {
+                margin-left: 0;
+                padding: 1.6em;
+                width: 45%;
+            }
+            .cd-timeline-content::before {
+                top: 24px;
+                left: 100%;
+                border-color: transparent;
+                border-left-color: white;
+            }
+            .cd-timeline-content .cd-read-more {
+                float: left;
+            }
+            .cd-timeline-content .cd-date {
+                position: absolute;
+                width: 100%;
+                left: 122%;
+                top: 6px;
+                font-size: 16px;
+                font-size: 1rem;
+            }
+            .cd-timeline-block:nth-child(even) .cd-timeline-content {
+                float: right;
+            }
+            .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+                top: 24px;
+                left: auto;
+                right: 100%;
+                border-color: transparent;
+                border-right-color: white;
+            }
+            .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+                float: right;
+            }
+            .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+                left: auto;
+                right: 122%;
+                text-align: right;
+            }
+            .cssanimations .cd-timeline-content.is-hidden {
+                visibility: hidden;
+            }
+            .cssanimations .cd-timeline-content.bounce-in {
+                visibility: visible;
+                -webkit-animation: cd-bounce-2 0.6s;
+                -moz-animation: cd-bounce-2 0.6s;
+                animation: cd-bounce-2 0.6s;
+            }
+        }
+
+        @media only screen and (min-width: 1170px) {
+            /* inverse bounce effect on even content blocks */
+            .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+                -webkit-animation: cd-bounce-2-inverse 0.6s;
+                -moz-animation: cd-bounce-2-inverse 0.6s;
+                animation: cd-bounce-2-inverse 0.6s;
+            }
+        }
+        @-webkit-keyframes cd-bounce-2 {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translateX(20px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+            }
+        }
+        @-moz-keyframes cd-bounce-2 {
+            0% {
+                opacity: 0;
+                -moz-transform: translateX(-100px);
+            }
+
+            60% {
+                opacity: 1;
+                -moz-transform: translateX(20px);
+            }
+
+            100% {
+                -moz-transform: translateX(0);
+            }
+        }
+        @keyframes cd-bounce-2 {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+                -moz-transform: translateX(-100px);
+                -ms-transform: translateX(-100px);
+                -o-transform: translateX(-100px);
+                transform: translateX(-100px);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translateX(20px);
+                -moz-transform: translateX(20px);
+                -ms-transform: translateX(20px);
+                -o-transform: translateX(20px);
+                transform: translateX(20px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                -o-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+        @-webkit-keyframes cd-bounce-2-inverse {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(100px);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translateX(-20px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+            }
+        }
+        @-moz-keyframes cd-bounce-2-inverse {
+            0% {
+                opacity: 0;
+                -moz-transform: translateX(100px);
+            }
+
+            60% {
+                opacity: 1;
+                -moz-transform: translateX(-20px);
+            }
+
+            100% {
+                -moz-transform: translateX(0);
+            }
+        }
+        @keyframes cd-bounce-2-inverse {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(100px);
+                -moz-transform: translateX(100px);
+                -ms-transform: translateX(100px);
+                -o-transform: translateX(100px);
+                transform: translateX(100px);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translateX(-20px);
+                -moz-transform: translateX(-20px);
+                -ms-transform: translateX(-20px);
+                -o-transform: translateX(-20px);
+                transform: translateX(-20px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                -o-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        header{
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url('images/willkommenbg.jpg') 50% no-repeat;
+            background-size:cover;
+        }
+
+        #cd-timeline{
+            position: relative;
+            top: 5vh;
+        }
+
+        .ueberschrift{
+            color: #fff;
+            font-size:18pt;
+            font-family: "Parisien Night";
+            margin-bottom: 5vh;
+            text-align: center;
+        }
+
+        .unteruberschrift{
+            color: #fff;
+            font-size: 16pt;
+            font-family: Roboto;
+            text-align: center;
+            margin-bottom: 5vh;
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+
+        .cd-green{
+            background-color: #68e042;
+        }
+
+        .cd-orange{
+            background-color: #ffa800;
+        }
+
+        .cd-orange, .cd-green{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .fa-video-camera, .fa-eye, .fa-cog{
+            color: #fff;
+            font-size: 20pt;
+        }
+
+        .content{
+            z-index: 100;
+            color: #fff;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .button{
+            background-color: #ffa800;
+            color: #fff;
+            font-size: 18pt;
+            font-family: Roboto;
+
+
+        }
+
+        .button:hover{
+            background-color: #68e042;
+        }
+
+        p{
+            font-family: Roboto;
+        }
+
+        h3{
+            color: #fff;
+            font-size: 28pt;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html"><img align="center" class="logo_img" src="images/logo.svg" /></a>
+</div>
+
+<header>
+    <h1 class="ueberschrift">Willkommen zur Reise deines Lebens!</h1>
+    <h2 class="unteruberschrift">Bevor es richtig losgehen kann, siehst du hier noch einmal was wir alles gemeinsam durchgehen werden!</h2>
+</header>
+
+<section id="cd-timeline" class="cd-container">
+
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-orange">
+            <i class="fa fa-video-camera"></i>
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Einf&uuml;hrung</h2>
+            <p>Was ist eine HTL? Was ist der Unterschied zwischen der Medientechnik und der Netzwerktechnik?<br> Finde es in diesem Animationsvideo heraus</p>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-green">
+            <i class="fa fa-eye"></i>
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Die Geschichte der HTL Rennweg</h2>
+            <p>Finde heraus, wie die HTL Rennweg entstand. Au&szlig;erdem kannst du herausfinden, was man mit der Medientechnik machen kann.</p>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-orange">
+            <i class="fa fa-cog"></i>
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Memory</h2>
+            <p>Du wei&szlig;t jetzt alles &uuml;ber die HTL Rennweg. Schauen wir mal wie gut du dich bei diesem HTL-Rennweg-Memory schl&auml;gst</p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-green">
+            <i class="fa fa-video-camera"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2> Introducing: Abteilungsvorstand Dr. Gerhard Hager</h2>
+            <p>Lerne unseren und vielleicht auch deinen Abteilungsvorstand kennen! Er beantwortet in diesem Video die wichtigsten Fragen und gibt auch pers&ouml;nliches preis.</p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-orange">
+            <i class="fa fa-eye"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Was kann man mit der Medientechnik alles machen?</h2>
+            <p>Wie gro&szlig; ist die Medientechnik und was beinhaltet sie? Was wird an der HTL Rennweg beigebracht? Erfahre hier über die gr&ouml;&szlig;ten Missverst&auml;ndnisse die Sch&uuml;ler &uuml;ber die Medientechnik haben </p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-green">
+            <i class="fa fa-cog"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Schr&ouml;dingers Katze</h2>
+            <p>Die Katze ist tot oder lebendig. Man erf&auml;hrt es erst, wenn man hineinschaut. Hier kannst du sehen, wie kreativ die Medientechnik eingesetzt werden kann</p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-orange">
+            <i class="fa fa-video-camera"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2> Introducing: Medientechniklehrer Mag. Roman Jerabek</h2>
+            <p>Herr Professor Jerabek ist DER Medientechniker in unserer Schule. Er schildert dir alles was du &uuml;ber die Medientechnik wissen musst und gibt dir einen weisen Rat</p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-green">
+            <i class="fa fa-eye"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Animationen</h2>
+            <p>Siehe dir hier an, wie wir B&auml;lle animieren. Vertrau mir, DAS willst du sehen!</p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-orange">
+            <i class="fa fa-cog"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Formen</h2>
+            <p>Wer hat gesagt, dass Formen nicht Spa&szlig; machen k&ouml;nnen? Nicht unsere Formen, mit denen man zeichnen kann, die man verschieben kann und so weiter. </p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-green">
+            <i class="fa fa-video-camera"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Der Tag der offenen T&uuml;r</h2>
+            <p>Kannst du dich nach all dem awesome stuff immer noch nicht entscheiden ob du in die HTL Rennweg m&ouml;chtest? Vielleicht hilft dir ja die Meinung anderer Interessenten. Spoiler Alert: Wir haben Hoverboards</p>
+        </div>
+    </div>
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-orange">
+            <i class="fa fa-video-camera"></i>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Ende unserer Reise</h2>
+            <p>Zum Schluss, wollen wir dir noch ein spezielles Video zeigen, wo ein ehemaliger Sch&uuml;er der HTL Rennweg gegen einen 2. Kl&auml;ssler in einem Quiz antritt. Was der Verlierer tun muss? Finde es heraus!</p>
+        </div>
+    </div>
+</section>
+
+<div class="content">
+    <a href="animationsvideo.html" class="button">Hier geht es weiter!</a>
+</div>
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+
+
+</body>
+</html>
